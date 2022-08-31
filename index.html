@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Spotifu - Reproductor web</title>
+    <meta property="og:title" content="Spotifu - Web Player: Music for everyone" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="https://open.spotifycdn.com/cdn/images/og-image.860da0d8.png" />
+    <meta property="og:description" content="La mejor música sólo aquí, en Spotifu." />
+    <meta name="description" content="Plataforma de streaming para disfrutar de tu música favorita">
+</head>
+<body class="body">
+
+    <div class="layout">
+        <div class="layout-block">
+            <div class="layout-sidebar">
+                <aside class="sidebar">
+                    <header class="logo">
+                        <a href="/" aria-current="page">
+                            <img src="./img/spotifu-logo.png" class="logoImage" width="112" height="32" alt="Logo de Spotify" title="Logo de Spotify">
+                        </a>
+                    </header>
+                
+                    <nav class="menu" aria-label="Principal" >
+                        <ul class="menu-list">
+                            <li class="menuItem is-active">
+                                <a href="/" class="link" aria-current="page">
+                                    <i class="icon-home" aria-hidden="true" ></i>
+                                    <span>Inicio</span>
+                                </a>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#" class="link">
+                                    <i class="icon-search" aria-hidden="true" ></i>
+                                    <span>Buscar</span>
+                                </a>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#" class="link">
+                                    <i class="icon-creditCard" aria-hidden="true" ></i>
+                                    <span>Premium</span>
+                                </a>
+                            </li>
+                        </ul>
+                
+                    </nav>
+                
+                    <nav class="list" aria-labelledby="library-navigation">
+                        <h2 class="list-title" id="library-navigation">Tu biblioteca</h2>
+                        <ul class="list-content">
+                            <li class="list-item">
+                                <a href="#" class="link">Creada para ti</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Escuchado recientemente</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Tus me gusta</a>
+                            </li>
+                        </ul>
+                    </nav>
+                
+                    <nav class="list" aria-labelledby="playlist-navigation">
+                        <h2 class="list-title" id="playlist-navigation">Playlist</h2>
+                        <ul class="list-content">
+                            <li class="list-item">
+                                <a href="#" class="link">Lo mejor de lo mejor</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Viejitas pero bonitas</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Para fiestas</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Favoritas de la radio</a>
+                            </li>
+                            <li class="list-item">
+                                <spa class="ellipsis">
+                                    <a href="#" class="link">This Is 初音ミク (HATSUNE MIKU)</a>
+                                </spa>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">This Is the pillows</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Más popular de la semana</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">This is Pokémon</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Reggeaton</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="#" class="link">Mis pistas de Shazam</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+            <div class="layout-main">
+                <div class="page">
+                    <div class="sticky">
+                        <div class="page-block">
+                            <header class="header" aria-label="Barra superior y menú del usuario">
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="Volver" title="Volver">
+                            
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            
+                                <form class="search" role="search" aria-label="Buscar por Artistas, canciones o podcasts">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <input type="search" placeholder="Buscar por Artistas, canciones o podcasts">
+                                </form>
+                            </header>
+                        </div>
+                    </div>
+                
+                    <main class="page-block">
+                        <section class="playlistList" aria-labelledby="region1">
+                            <div class="playlistList-top">
+                                <h2 class="playlistList-title" id="region1">
+                                    Buenas noches
+                                </h2>
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="Volver" title="Volver">
+                            
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="playlistList-container">
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover2.jpg" width="76" height="76" alt="Cover de la canción Stuff Is Way" title="Cover de la canción Stuff Is Way">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Stuff Is Way</h3>
+                                            <h4 class="playlistB-description">They Might Be Giants</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=vVJemL-Lk0s&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Stuff Is Way" aria-label="Reproducir la canción Stuff Is Way">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover3.jpg" width="76" height="76" alt="Cover de la canción Da da da" title="Cover de la canción Da da da">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Da Da Da</h3>
+                                            <h4 class="playlistB-description">Trio</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=5Q6ccOMOFeU&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Da da da" aria-label="Reproducir la canción Da da da">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover4.jpg" width="76" height="76" alt="Cover de la canción Enjoy the Silence" title="Cover de la canción Enjoy the Silence">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Enjoy the Silence</h3>
+                                            <h4 class="playlistB-description">Depeche Mode</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=A6QLkCZp2n4&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Enjoy the Silence" aria-label="Reproducir la canción Enjoy the Silence">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover5.jpg" width="76" height="76" alt="Cover de la canción 96 Quite Bitter Beings" title="Cover de la canción 96 Quite Bitter Beings">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">96 Quite Bitter</h3>
+                                            <h4 class="playlistB-description">CKY</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=14eVFQeegxQ&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción 96 Quite Bitter Beings" aria-label="Reproducir la canción 96 Quite Bitter Beings">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover6.jpg" width="76" height="76" alt="Cover de la canción Pink Phantom" title="Cover de la canción Pink Phantom">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Pink Phantom</h3>
+                                            <h4 class="playlistB-description">Gorillaz</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=HIajY4WhWUc&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Pink Phantom" aria-label="Reproducir la canción Pink Phantom">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover7.jpg" width="76" height="76" alt="Cover de la canción Problems" title="Cover de la canción Problems">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Problems</h3>
+                                            <h4 class="playlistB-description">Mother Mother</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=fZ55xoOYDNY&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Problems" aria-label="Reproducir la canción Problems">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover8.jpg" width="76" height="76" alt="Cover de la canción Killing Creatures" title="Cover de la canción Killing Creatures">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Killing Creatures</h3>
+                                            <h4 class="playlistB-description">Masterstroke</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=AniqBZuKF6M&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Killing Creatures" aria-label="Reproducir la canción Killing Creatures">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover9.jpg" width="76" height="76" alt="Cover de la canción SIU" title="Cover de la canción SIU">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">SIU</h3>
+                                            <h4 class="playlistB-description">MARETU</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=D2NBIvZH6hU&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción SIU" aria-label="Reproducir la canción SIU">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="playlistB">
+                    
+                                    <div class="playlistB-cover">
+                                        <img src="./img/cover10.jpg" width="76" height="76" alt="Cover de la canción Dr. Sunshine is Dead" title="Cover de la canción Dr. Sunshine is Dead">
+                                    </div>
+                                    <div class="playlistB-details">
+                                        <div class="platlistB-details-text">
+                                            <h3 class="playlistB-title">Dr. Sunshine is Dead</h3>
+                                            <h4 class="playlistB-description">Will Wood</h4>
+                                        </div>
+                                        <div class="playlistB-control">
+                                            <a href="https://music.youtube.com/watch?v=1kPGPSiNmys&feature=share" target="_blank">
+                                                <button class="buttonIcon is-primary" title="Reproducir la canción Dr. Sunshine is Dead" aria-label="Reproducir la canción Dr. Sunshine is Dead">
+                                                    <i class="icon-play" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </section>
+                    
+                        <section class="playlistList" aria-labelledby="region2">
+                            <div class="playlistList-top">
+                                <h2 class="playlistList-title" id="region2">
+                                    Escuchado recientemente
+                                </h2>
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="Volver" title="Volver">
+                            
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="playlistList-container">
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover1.jpg" width="150" height="150" alt="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)" title="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)">
+                                        <a href="https://music.youtube.com/watch?v=wP98BTJ67j4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)</h3>
+                                    <h4 class="playlistA-description">Redman • DJ Kool</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover11.jpg" width="150" height="150" alt="Cover de la canción The Great Pretender" title="Cover de la canción The Great Pretender">
+                                        <a href="https://music.youtube.com/watch?v=5CT4a7DchbQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">The Great Pretender</h3>
+                                    <h4 class="playlistA-description">Pain</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover12.jpg" width="150" height="150" alt="Cover de la canción Start a War" title="Cover de la canción Start a War">
+                                        <a href="https://music.youtube.com/watch?v=WWrDWMtVuY8&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Start a War</h3>
+                                    <h4 class="playlistA-description">Static-X</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover13.jpg" width="150" height="150" alt="Cover de la canción My Plague" title="Cover de la canción My Plague">
+                                        <a href="https://music.youtube.com/watch?v=scWwtVP1TEw&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">My Plague</h3>
+                                    <h4 class="playlistA-description">Slipknot</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover14.jpg" width="150" height="150" alt="Cover de la canción Cats on Mars" title="Cover de la canción Cats on Mars">
+                                        <a href="https://music.youtube.com/watch?v=nJ-44oeO8Dc&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Cats on Mars</h3>
+                                    <h4 class="playlistA-description">Yun Head</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover15.jpg" width="150" height="150" alt="Cover de la canción Luv (sic) pt4" title="Cover de la canción Luv (sic) pt4">
+                                        <a href="https://music.youtube.com/watch?v=sNnglpAqMgU&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Luv (sic) pt4</h3>
+                                    <h4 class="playlistA-description">Nujabes</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover16.jpg" width="150" height="150" alt="Cover de la canción Daydream" title="Cover de la canción Daydream">
+                                        <a href="https://music.youtube.com/watch?v=4Xis3dXKgS4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Daydream</h3>
+                                    <h4 class="playlistA-description">Wallace Collection</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover17.jpg" width="150" height="150" alt="Cover de la canción 空想ルンバらっぷ" title="Cover de la canción 空想ルンバらっぷ">
+                                        <a href="https://music.youtube.com/watch?v=drKzdaQ0cjQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">空想ルンバらっぷ</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover18.jpg" width="150" height="150" alt="Cover de la canción 林檎もぎれビーム!" title="Cover de la canción 林檎もぎれビーム!">
+                                        <a href="https://music.youtube.com/watch?v=-IxPFvG5taA&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">林檎もぎれビーム!</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="playlistList" aria-labelledby="region3">
+                            <div class="playlistList-top">
+                                <h2 class="playlistList-title" id="region3">
+                                    Lo mejor de lo mejor
+                                </h2>
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="Volver" title="Volver">
+                            
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="playlistList-container">
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover1.jpg" width="150" height="150" alt="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)" title="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)">
+                                        <a href="https://music.youtube.com/watch?v=wP98BTJ67j4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)</h3>
+                                    <h4 class="playlistA-description">Redman • DJ Kool</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover11.jpg" width="150" height="150" alt="Cover de la canción The Great Pretender" title="Cover de la canción The Great Pretender">
+                                        <a href="https://music.youtube.com/watch?v=5CT4a7DchbQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">The Great Pretender</h3>
+                                    <h4 class="playlistA-description">Pain</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover12.jpg" width="150" height="150" alt="Cover de la canción Start a War" title="Cover de la canción Start a War">
+                                        <a href="https://music.youtube.com/watch?v=WWrDWMtVuY8&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Start a War</h3>
+                                    <h4 class="playlistA-description">Static-X</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover13.jpg" width="150" height="150" alt="Cover de la canción My Plague" title="Cover de la canción My Plague">
+                                        <a href="https://music.youtube.com/watch?v=scWwtVP1TEw&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">My Plague</h3>
+                                    <h4 class="playlistA-description">Slipknot</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover14.jpg" width="150" height="150" alt="Cover de la canción Cats on Mars" title="Cover de la canción Cats on Mars">
+                                        <a href="https://music.youtube.com/watch?v=nJ-44oeO8Dc&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Cats on Mars</h3>
+                                    <h4 class="playlistA-description">Yun Head</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover15.jpg" width="150" height="150" alt="Cover de la canción Luv (sic) pt4" title="Cover de la canción Luv (sic) pt4">
+                                        <a href="https://music.youtube.com/watch?v=sNnglpAqMgU&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Luv (sic) pt4</h3>
+                                    <h4 class="playlistA-description">Nujabes</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover16.jpg" width="150" height="150" alt="Cover de la canción Daydream" title="Cover de la canción Daydream">
+                                        <a href="https://music.youtube.com/watch?v=4Xis3dXKgS4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Daydream</h3>
+                                    <h4 class="playlistA-description">Wallace Collection</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover17.jpg" width="150" height="150" alt="Cover de la canción 空想ルンバらっぷ" title="Cover de la canción 空想ルンバらっぷ">
+                                        <a href="https://music.youtube.com/watch?v=drKzdaQ0cjQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">空想ルンバらっぷ</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover18.jpg" width="150" height="150" alt="Cover de la canción 林檎もぎれビーム!" title="Cover de la canción 林檎もぎれビーム!">
+                                        <a href="https://music.youtube.com/watch?v=-IxPFvG5taA&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">林檎もぎれビーム!</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="playlistList" aria-labelledby="region4">
+                            <div class="playlistList-top">
+                                <h2 class="playlistList-title" id="region4">
+                                    Especialmente para ti
+                                </h2>
+                                <div class="navigation">
+                                    <button class="navigation-prev" aria-label="Volver" title="Volver">
+                            
+                                        <i class="icon-arrowLeft" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="navigation-next" disabled aria-label="Avanzar" title="Avanzar">
+                                        <i class="icon-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="playlistList-container">
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover1.jpg" width="150" height="150" alt="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)" title="Cover de la canción Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)">
+                                        <a href="https://music.youtube.com/watch?v=wP98BTJ67j4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Let's Get Dirty (I Can't Get In Da Club) (con DJ Kool)</h3>
+                                    <h4 class="playlistA-description">Redman • DJ Kool</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover11.jpg" width="150" height="150" alt="Cover de la canción The Great Pretender" title="Cover de la canción The Great Pretender">
+                                        <a href="https://music.youtube.com/watch?v=5CT4a7DchbQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">The Great Pretender</h3>
+                                    <h4 class="playlistA-description">Pain</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover12.jpg" width="150" height="150" alt="Cover de la canción Start a War" title="Cover de la canción Start a War">
+                                        <a href="https://music.youtube.com/watch?v=WWrDWMtVuY8&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Start a War</h3>
+                                    <h4 class="playlistA-description">Static-X</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover13.jpg" width="150" height="150" alt="Cover de la canción My Plague" title="Cover de la canción My Plague">
+                                        <a href="https://music.youtube.com/watch?v=scWwtVP1TEw&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">My Plague</h3>
+                                    <h4 class="playlistA-description">Slipknot</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover14.jpg" width="150" height="150" alt="Cover de la canción Cats on Mars" title="Cover de la canción Cats on Mars">
+                                        <a href="https://music.youtube.com/watch?v=nJ-44oeO8Dc&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Cats on Mars</h3>
+                                    <h4 class="playlistA-description">Yun Head</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover15.jpg" width="150" height="150" alt="Cover de la canción Luv (sic) pt4" title="Cover de la canción Luv (sic) pt4">
+                                        <a href="https://music.youtube.com/watch?v=sNnglpAqMgU&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Luv (sic) pt4</h3>
+                                    <h4 class="playlistA-description">Nujabes</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover16.jpg" width="150" height="150" alt="Cover de la canción Daydream" title="Cover de la canción Daydream">
+                                        <a href="https://music.youtube.com/watch?v=4Xis3dXKgS4&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">Daydream</h3>
+                                    <h4 class="playlistA-description">Wallace Collection</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover17.jpg" width="150" height="150" alt="Cover de la canción 空想ルンバらっぷ" title="Cover de la canción 空想ルンバらっぷ">
+                                        <a href="https://music.youtube.com/watch?v=drKzdaQ0cjQ&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">空想ルンバらっぷ</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                                <div class="playlistA">
+                                    <div class="playlistA-cover">
+                                        <img src="./img/cover18.jpg" width="150" height="150" alt="Cover de la canción 林檎もぎれビーム!" title="Cover de la canción 林檎もぎれビーム!">
+                                        <a href="https://music.youtube.com/watch?v=-IxPFvG5taA&feature=share" target="_blank">
+                                            <button class="buttonIcon is-primary" aria-label="Reproducir" title="Reproducir">
+                                                <i class="icon-play" aria-hidden="true"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <h3 class="playlistA-title">林檎もぎれビーム!</h3>
+                                    <h4 class="playlistA-description">大槻ケンヂ</h4>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+            
+                </div>
+            </div>
+        </div>
+        <div class="layout-block">
+            <footer class="layout-bottom">
+                <div class="player">
+            
+                    <div class="player-nowPlaying">
+                        <div class="nowPlaying">
+                            <div class="nowPlaying-cover">
+                                <a href="https://music.youtube.com/watch?v=ds2uj3dXztQ&feature=share" target="_blank">
+                                    <img src="./img/temaactual1.jpg" width="56" height="56" alt="The Rebel Path" title="The Rebel Path">
+                                </a>
+                            </div>
+                            <div class="nowPlaying-details">
+                                <div class="nowPlaying-descripcion">
+                                    <a href="https://music.youtube.com/watch?v=ds2uj3dXztQ&feature=share" target="_blank" class="nowPlaying-title">
+                                        Fonz
+                                    </a>
+                                    <a href="https://en.wikipedia.org/wiki/Eugene_McGuinness" target="_blank" class="nowPlaying-artist">
+                                        Eugene McGuinness
+                                    </a>    
+                                </div>
+                                <div class="nowPlaying-actions">
+                                    <button class="player-control" aria-checked="true" aria-describedby="icon-heart" role="switch" aria-label="Guardar en tu biblioteca" title="Guardar en tu biblioteca">
+                                        <i class="icon-heart" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="player-playerControls">
+                        <div class="playerControls">
+                            <div class="playerControls-buttons" aria-label="Controles de reproducción">
+                                <button class="buttonIcon" aria-label="Anterior" title="Anterior">
+                                    <i class="icon-prev" aria-hidden="true"></i>
+                                </button>
+                                <a href="https://music.youtube.com/watch?v=ds2uj3dXztQ&feature=share" target="_blank">
+                                    <button class="buttonIcon is-white" aria-label="Reproducir" title="Reproducir">
+                                        <i class="icon-play" aria-hidden="true"></i>
+                                    </button>
+                                </a>
+                                <button class="buttonIcon" aria-label="Siguiente" title="Siguiente">
+                                    <i class="icon-next" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="playerPlayback">
+                                <span class="playerPlayback-progressTime" >0:26</span>
+                                <div class="playerPlayback-slider">
+                                    <div class="slider">
+                                        <div class="slider-progress">
+                                            <button class="slider-button" aria-label="Controlar el progreso de la reproducción">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="playerPlayback-progressTime">2:20</span>
+                    
+                    
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="player-playerVolumen">
+                        <div class="playerVolumen">
+                            <button class="player-control" aria-label="Silenciar" aria-describedby="volumen-icon" >
+                                <i class="icon-volumeUp" id="volumen-icon" aria-hidden="true" role="presentation" aria-label="Volumen alto"></i>
+                            </button>
+                            <div class="playerVolumen-slider">
+                                <div class="slider">
+                                    <div class="slider-progress">
+                                        <button class="slider-button" aria-label="Controlar el progreso de la reproducción">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
