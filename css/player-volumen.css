@@ -1,0 +1,11 @@
+.playerVolumen {
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.playerVolumen-slider {
+    flex: 1;
+    inline-size: 4rem;
+}
