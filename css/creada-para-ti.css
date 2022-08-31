@@ -1,0 +1,74 @@
+#layout-creada {
+    background: url("../img/portada.jpg") ;
+    background-size: cover;
+    display: flex;
+    
+}
+
+.creada-para-ti {
+
+}
+
+.creada-para-ti-elementos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-inline-size: 63rem;
+
+}
+
+.creada-para-ti-elementos h3 {
+    font: var(--headLine1);
+    color: var(--white);
+    margin: 0;
+}
+
+.creada-para-ti-elementos h4 {
+    font: var(--baseFont);
+    color: var(--white);
+    margin: 0;
+
+}
+
+.h4-creada {
+    margin-block: 1rem;
+}
+
+.repro-creada {
+    padding-inline: 2rem;
+    padding-block: .5rem;
+    font: var(--baseFont);
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.filtrar {
+    background: none;
+    flex: 1;
+}
+
+.filtrar-details {
+    display: flex;
+    align-items: center;
+}
+
+.canciones {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.canciones-playlist {
+    display: flex;
+    gap: 8rem;
+}
+
+.encabezados {
+    display: flex;
+    margin-inline-start: 6rem;
+    justify-content: space-between;
+    align-items: center;
+}

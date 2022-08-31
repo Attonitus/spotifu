@@ -1,0 +1,27 @@
+.usuario-menu {
+    display: flex;
+    gap: .25rem;
+    background: var(--gray60);
+    border-radius: 1rem;
+}
+
+.usuario-menu i {
+    font: var(--small);
+}
+.usuario-details h3 {
+    font: var(--baseFont);
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.usuario-details img {
+    border-radius: 0.875rem;
+    
+}
+.usuario-details {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
